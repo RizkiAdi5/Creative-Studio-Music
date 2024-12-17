@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Move Event</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .tracker {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: yellow;
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.1s;
+        }
+        .info {
+            position: absolute;
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tracker" id="tracker"></div>
+    <div class="info" id="info">Move your mouse!</div>
+
+    <script>
+        const tracker = document.getElementById('tracker');
+        const info = document.getElementById('info');
+
+        // Event Listener for mousemove
+        document.addEventListener('mousemove', (e) => {
+            // Update position of the tracker
+            tracker.style.transform = `translate(${e.pageX - 5}px, ${e.pageY - 5}px)`;
+
+            // Update position info
+            info.textContent = `X: ${e.pageX}, Y: ${e.pageY}`;
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keypress Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        .output {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Type something..." />
+    <div class="output" id="output">Start typing to see the result...</div>
+
+    <script>
+        const textInput = document.getElementById('textInput');
+        const output = document.getElementById('output');
+
+        // Add keypress event listener
+        textInput.addEventListener('keypress', (e) => {
+            // Capture the character pressed
+            const char = e.key;
+
+            // Update output with the key
+            output.textContent = `You pressed: ${char}`;
+        });
+    </script>
+</body>
+</html>
+

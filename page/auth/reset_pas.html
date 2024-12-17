@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Music Hub</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/reset_password.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- google font -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <section id="forgotPassword">
+        <h2>Forgot Password</h2>
+        <form id="forgotPasswordForm">
+          <label for="resetEmail">Enter your email:</label>
+          <input type="email" id="resetEmail" name="resetEmail" required />
+
+          <label for="newPassword">New Password:</label>
+          <input type="password" id="newPassword" name="newPassword" required />
+
+          <label for="confirmNewPassword">Confirm New Password:</label>
+          <input
+            type="password"
+            id="confirmNewPassword"
+            name="confirmNewPassword"
+            required
+          />
+
+          <button type="submit" id="resetPasswordBtn">Reset Password</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
